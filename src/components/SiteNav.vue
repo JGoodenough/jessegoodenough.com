@@ -30,8 +30,10 @@ h1, h2 {
 
 .site-nav {
   display: block;
-  width: 100%;
-  margin-left: 5%;
+  width: 98%;
+  margin: 0em .5em;
+  border-bottom: 1px solid #24A061;
+  height: 23px;
 }
 
 .site-nav__site-logo {
@@ -65,5 +67,10 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     /*background-color: #111;*/
+    border-bottom: 2px solid #24A061;
+}
+li a:active {
+    /*background-color: #111;*/
+    border-bottom: 2px solid #24A061;
 }
 </style>
