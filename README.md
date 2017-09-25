@@ -1,6 +1,5 @@
 
 # jessegoodenough.com
-# jg-vue-webpack
 
 > A Vue.js project
 

@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       siteName: 'JesseGoodenough',
-      siteURL: 'www.jessegoodenough.com',
+      siteURL: '/',
       navLinks: [
         {
           path: 'code',
@@ -30,6 +30,10 @@ export default {
         {
           path: 'climb',
           name: 'climb'
+        },
+        {
+          path: 'tea',
+          name: 'tea'
         }
       ]
     }
@@ -84,6 +88,7 @@ li a:hover {
     /*background-color: #111;*/
     border-bottom: 2px solid #24A061;
 }
+
 li a:active {
     /*background-color: #111;*/
     border-bottom: 2px solid #24A061;
