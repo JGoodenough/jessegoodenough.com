@@ -2,10 +2,7 @@
   <div class="site-nav">
     <ul>
       <li><a class="site-nav__site-logo" v-bind:href="siteURL">{{ siteName }}</a></li>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <li v-for="navLink in navLinks"><a v-bind:href="navLink.path" target="_blank">{{navLink.name}}</a></li>
     </ul>
   </div>
 </template>
@@ -16,7 +13,25 @@ export default {
   data () {
     return {
       siteName: 'JesseGoodenough',
-      siteURL: 'www.jessegoodenough.com'
+      siteURL: 'www.jessegoodenough.com',
+      navLinks: [
+        {
+          path: 'code',
+          name: 'code'
+        },
+        {
+          path: 'ultra-running',
+          name: 'ultra-running'
+        },
+        {
+          path: 'surf',
+          name: 'surf'
+        },
+        {
+          path: 'climb',
+          name: 'climb'
+        }
+      ]
     }
   }
 }
