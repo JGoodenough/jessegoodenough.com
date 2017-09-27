@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ msg }}</h1>
-    <p>I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber and surfer.</p>
+    <p>I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber, route setter and surfer.</p>
   </div>
 </template>
 
