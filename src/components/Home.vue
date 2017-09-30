@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ msg }}</h1>
-    <p>I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber, route setter and surfer.</p>
+    <p>{{ siteDescription }}</p>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   name: 'home',
   data () {
     return {
-      msg: 'A personal site.'
+      msg: 'A personal site.',
+      siteDescription: `I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber, route setter and surfer.`
     }
   }
 }
