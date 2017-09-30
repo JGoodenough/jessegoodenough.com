@@ -2,7 +2,7 @@
   <div class="site-nav">
     <ul>
       <li><a class="site-nav__site-logo" v-bind:href="siteURL">{{ siteName }}</a></li>
-      <li v-for="navLink in navLinks"><a v-bind:href="navLink.path" target="_blank">{{navLink.name}}</a></li>
+      <li v-for="navLink in navLinks"><a v-bind:href="navLink.path">{{navLink.name}}</a></li>
     </ul>
   </div>
 </template>
