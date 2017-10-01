@@ -1,7 +1,7 @@
 <template>
   <div class="code">
-    <h1>{{ msg }}</h1>
-    <p>{{ siteDescription }}</p>
+    <h1>{{ headTitle }}</h1>
+    <p>{{ description }}</p>
   </div>
 </template>
 
@@ -10,8 +10,8 @@ export default {
   name: 'code',
   data () {
     return {
-      headTitle: 'A personal site.',
-      description: `I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber, route setter and surfer.`
+      headTitle: 'Code page header',
+      description: `Code Page Section!`
     }
   }
 }
