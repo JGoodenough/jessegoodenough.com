@@ -1,7 +1,7 @@
 <template>
   <div class="code">
     <h1>{{ headTitle }}</h1>
-    <p>{{ description }}</p>
+    <code class="code__body">{{ description }}</code>
   </div>
 </template>
 
@@ -35,5 +35,17 @@ li {
 
 a {
   color: #42b983;
+}
+
+.code {
+  width:100%;
+}
+
+.code__body {
+  background-color: #000000;
+  color: #28E92C;
+  border: 1px solid #FFF;
+  width: 100%;
+  padding: 2em;
 }
 </style>
