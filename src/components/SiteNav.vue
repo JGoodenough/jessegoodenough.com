@@ -1,10 +1,10 @@
 <template>
-  <div class="site-nav">
+  <nav class="site-nav">
     <ul>
       <li><a class="site-nav__site-logo" v-bind:href="siteURL">{{ siteName }}</a></li>
       <li v-for="navLink in navLinks"><a v-bind:href="navLink.path">{{navLink.name}}</a></li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -72,25 +72,24 @@ ul {
 }
 
 li {
-    float: left;
-}
+  float: left;
 
-li a {
+  a {
     display: inline-block;
     color: #000;
     text-align: center;
     padding: 0 .5em;
     text-decoration: none;
-}
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    /*background-color: #111;*/
-    border-bottom: 2px solid #24A061;
-}
+    &:hover {
+      /*background-color: #111;*/
+      border-bottom: 2px solid #24A061;
+    }
 
-li a:active {
-    /*background-color: #111;*/
-    border-bottom: 2px solid #24A061;
+    &:active {
+      /*background-color: #111;*/
+      border-bottom: 2px solid #24A061;
+    }
+  }
 }
 </style>
