@@ -43,6 +43,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import '../styles/global.scss';
+
 h1, h2 {
   font-weight: normal;
 }
@@ -56,7 +58,8 @@ h1, h2 {
 
   &__site-logo {
     text-decoration: none;
-    color: #000;
+    color: $site-color;//#000;
+    font-weight: $font-bold;
     padding: 0 0.5em;
     margin: 0;
     font-weight: bold;

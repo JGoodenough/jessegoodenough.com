@@ -15,8 +15,9 @@ export default {
   }
 }
 </script>
-
 <style lang="scss">
+@import './styles/global.scss';
+
 * {
     box-sizing: border-box;
 }
@@ -26,7 +27,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $site-color;
   margin-top: 0;
+  background-color: $site-background-color;
 }
 </style>
