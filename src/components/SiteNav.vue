@@ -50,14 +50,14 @@ h1, h2 {
 .site-nav {
   display: block;
   width: 98%;
-  margin: 0em .5em;
+  margin: 0em 0.5em;
   border-bottom: 1px solid #24A061;
   height: 23px;
 
   &__site-logo {
     text-decoration: none;
     color: #000;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     margin: 0;
     font-weight: bold;
     display: inline-block;
@@ -78,7 +78,7 @@ li {
     display: inline-block;
     color: #000;
     text-align: center;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     text-decoration: none;
 
     &:hover {
