@@ -18,7 +18,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 h1, h2 {
   font-weight: normal;
 }
@@ -39,13 +39,13 @@ a {
 
 .code {
   width:100%;
-}
 
-.code__body {
-  background-color: #000000;
-  color: #28E92C;
-  border: 1px solid #FFF;
-  width: 100%;
-  padding: 2em;
+  &__body {
+    background-color: #000000;
+    color: #28E92C;
+    border: 1px solid #FFF;
+    width: 100%;
+    padding: 2em;
+  }
 }
 </style>

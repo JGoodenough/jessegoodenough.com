@@ -42,7 +42,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 h1, h2 {
   font-weight: normal;
 }
@@ -53,15 +53,15 @@ h1, h2 {
   margin: 0em .5em;
   border-bottom: 1px solid #24A061;
   height: 23px;
-}
 
-.site-nav__site-logo {
-  text-decoration: none;
-  color: #000;
-  padding: 0 .5em;
-  margin: 0;
-  font-weight: bold;
-  display: inline-block;
+  &__site-logo {
+    text-decoration: none;
+    color: #000;
+    padding: 0 .5em;
+    margin: 0;
+    font-weight: bold;
+    display: inline-block;
+  }
 }
 
 ul {
