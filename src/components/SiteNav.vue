@@ -1,8 +1,8 @@
 <template>
   <nav class="site-nav">
     <ul>
-      <li><a class="site-nav__site-logo" v-bind:href="siteURL">{{ siteName }}</a></li>
-      <li v-for="navLink in navLinks"><a v-bind:href="navLink.path">{{navLink.name}}</a></li>
+      <li><router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link></li>
+      <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
   </nav>
 </template>
@@ -65,6 +65,10 @@ h1, h2 {
     font-weight: bold;
     display: inline-block;
   }
+}
+
+.router-link-active {
+  border-bottom: 2px solid #24A061;
 }
 
 ul {
