@@ -71,7 +71,7 @@ h1, h2 {
   }
 
   &__desktop {
-    display: block;
+    display: inline-block;
     @include mobile {
       display: none;
     }
@@ -82,6 +82,7 @@ h1, h2 {
     width: 20px;
     height: 20px;
     display: block;
+    float: right;
     @include desktop {
       display: none;
     }
