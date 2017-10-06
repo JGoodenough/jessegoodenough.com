@@ -1,9 +1,13 @@
 <template>
   <nav class="site-nav">
-    <ul>
+    <ul class="site-nav__desktop">
       <li><router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link></li>
       <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
+
+    <div class="site-nav__mobile">
+      
+    </div>
   </nav>
 </template>
 
@@ -65,6 +69,24 @@ h1, h2 {
     font-weight: bold;
     display: inline-block;
   }
+
+  &__desktop {
+    display: block;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    background-image: url('../assets/images/mobile-nav-icon.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    @include desktop {
+      display: none;
+    }
+  }
+
 }
 
 .router-link-active {
