@@ -4,9 +4,10 @@
       <li><router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link></li>
       <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
-
-    <div class="site-nav__mobile">
-      
+    <div class="site-nav__mobile-bar-container" :click="toggleMobileMenu()">
+      <div class="site-nav__mobile-bar" v-bind:class="{change: isChange}"></div>
+      <div class="site-nav__mobile-bar"></div>
+      <div class="site-nav__mobile-bar"></div>
     </div>
   </nav>
 </template>
@@ -14,10 +15,16 @@
 <script>
 export default {
   name: 'sitenav',
+  methods: {
+    toggleMobileMenu: function () {
+      this.isChange = true
+    }
+  },
   data () {
     return {
       siteName: 'JesseGoodenough',
       siteURL: '/',
+      isChange: false,
       navLinks: [
         {
           path: 'code',
@@ -60,6 +67,10 @@ h1, h2 {
   border-bottom: 1px solid #24A061;
   height: 23px;
 
+  @include mobile {
+    border-bottom: none;
+  }
+
   &__site-logo {
     text-decoration: none;
     color: $site-color;//#000;
@@ -77,15 +88,39 @@ h1, h2 {
     }
   }
 
-  &__mobile {
-    background-image: url('../assets/images/mobile-nav-icon.png');
-    width: 20px;
-    height: 20px;
-    display: block;
-    float: right;
+  &__mobile-bar-container {
+    cursor: pointer;
     @include desktop {
       display: none;
     }
+    @include mobile {
+      display: inline-block;
+    }
+  }
+  &__mobile-bar-1, &__mobile-bar-2, &__mobile-bar-3 {
+    // display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  .change &__mobile-bar-1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+
+  /* Fade out the second bar */
+  .change &__mobile-bar-2 {
+      opacity: 0;
+  }
+
+  /* Rotate last bar */
+  .change &__mobile-bar-3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+      transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
 }
