@@ -101,6 +101,7 @@ h1, h2 {
     background-color: #333;
     margin: 6px 0;
     transition: 0.4s;
+    @include border-radius(10px);
   }
 
   /* Rotate first bar */
