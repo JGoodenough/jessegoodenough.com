@@ -4,10 +4,10 @@
       <li><router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link></li>
       <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
-    <div class="site-nav__mobile-bar-container" :click="toggleMobileMenu()">
-      <div class="site-nav__mobile-bar" v-bind:class="{change: isChange}"></div>
-      <div class="site-nav__mobile-bar"></div>
-      <div class="site-nav__mobile-bar"></div>
+    <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
+      <div class="site-nav__mobile-bar-1" v-bind:class="{'site-nav__mobile-bar-1--change': isChange}"></div>
+      <div class="site-nav__mobile-bar-2" v-bind:class="{'site-nav__mobile-bar-2--change': isChange}"></div>
+      <div class="site-nav__mobile-bar-3" v-bind:class="{'site-nav__mobile-bar-3--change': isChange}"></div>
     </div>
   </nav>
 </template>
@@ -17,7 +17,7 @@ export default {
   name: 'sitenav',
   methods: {
     toggleMobileMenu: function () {
-      this.isChange = true
+      this.isChange = !this.isChange
     }
   },
   data () {
@@ -64,12 +64,7 @@ h1, h2 {
   display: block;
   width: 98%;
   margin: 0em 0.5em;
-  border-bottom: 1px solid #24A061;
   height: 23px;
-
-  @include mobile {
-    border-bottom: none;
-  }
 
   &__site-logo {
     text-decoration: none;
@@ -83,6 +78,8 @@ h1, h2 {
 
   &__desktop {
     display: inline-block;
+    border-bottom: 1px solid #24A061;
+    width: 100%;
     @include mobile {
       display: none;
     }
@@ -101,24 +98,24 @@ h1, h2 {
     // display: block;
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: #333;
     margin: 6px 0;
     transition: 0.4s;
   }
 
   /* Rotate first bar */
-  .change &__mobile-bar-1 {
+  &__mobile-bar-1--change  {
       -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
       transform: rotate(-45deg) translate(-9px, 6px) ;
   }
 
   /* Fade out the second bar */
-  .change &__mobile-bar-2 {
+  &__mobile-bar-2--change {
       opacity: 0;
   }
 
   /* Rotate last bar */
-  .change &__mobile-bar-3 {
+  &__mobile-bar-3--change {
       -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
       transform: rotate(45deg) translate(-8px, -8px) ;
   }
