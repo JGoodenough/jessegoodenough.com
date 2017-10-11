@@ -1,8 +1,8 @@
 <template>
   <nav class="site-nav">
     <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
-    <ul class="site-nav__menu">
-      <li class="site-nav__menu-item" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
+    <ul class="site-nav__menu" v-bind:class="{'site-nav__menu--active': isChange}">
+      <li class="site-nav__menu-item" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
     <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
       <div class="site-nav__mobile-bar-1" v-bind:class="{'site-nav__mobile-bar-1--change': isChange}"></div>
@@ -90,9 +90,15 @@ h1, h2 {
     width: 80%;
     float: left;
     @include mobile {
+      display: none;
+    }
+  }
+
+  &__menu--active {
+    @include mobile {
       display: block;
       width: 92%;
-      margin: 1em 0;
+      margin: 3em 0;
       z-index: 1;
       position: absolute;
       border: 1px solid $active-color;
@@ -105,6 +111,7 @@ h1, h2 {
       display: block;
       clear: both;
       text-align: center;
+      width: 100%;
     }
   }
   &__mobile-bar-container {
