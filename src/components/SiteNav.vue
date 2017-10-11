@@ -75,7 +75,7 @@ h1, h2 {
     font-weight: bold;
     display: inline-block;
     @include desktop {
-      width: 20%;
+      width: 15%;
     }
     @include mobile {
       width: 40%;
@@ -87,7 +87,7 @@ h1, h2 {
   &__menu {
     display: inline-block;
     border-bottom: 1px solid $active-color;
-    width: 80%;
+    width: 85%;
     float: left;
     @include mobile {
       display: none;
