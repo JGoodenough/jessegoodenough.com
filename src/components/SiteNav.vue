@@ -85,6 +85,10 @@ h1, h2 {
     }
   }
 
+  &__mobile-menu {
+    display: none;
+  }
+
   &__mobile-bar-container {
     cursor: pointer;
     @include desktop {
@@ -96,7 +100,7 @@ h1, h2 {
   }
   &__mobile-bar-1, &__mobile-bar-2, &__mobile-bar-3 {
     // display: block;
-    width: 35px;
+    width: 30px;
     height: 5px;
     background-color: #333;
     margin: 6px 0;
@@ -106,8 +110,8 @@ h1, h2 {
 
   /* Rotate first bar */
   &__mobile-bar-1--change  {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-      transform: rotate(-45deg) translate(-9px, 6px) ;
+      -webkit-transform: rotate(-45deg) translate(-7px, 8px) ;
+      transform: rotate(-45deg) translate(-7px, 8px) ;
   }
 
   /* Fade out the second bar */
@@ -117,8 +121,8 @@ h1, h2 {
 
   /* Rotate last bar */
   &__mobile-bar-3--change {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-      transform: rotate(45deg) translate(-8px, -8px) ;
+      -webkit-transform: rotate(45deg) translate(-7px, -9px) ;
+      transform: rotate(45deg) translate(-7px, -9px) ;
   }
 
 }
