@@ -141,7 +141,7 @@ h1, h2 {
     // display: block;
     width: 30px;
     height: 5px;
-    background-color: #333;
+    background-color: $menu-bar-color;
     margin: 5px 0;
     transition: 0.4s;
     @include border-radius(10px);
