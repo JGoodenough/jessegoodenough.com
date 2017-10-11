@@ -1,8 +1,8 @@
 <template>
   <nav class="site-nav">
     <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
-    <ul class="site-nav__desktop">
-      <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
+    <ul class="site-nav__menu">
+      <li class="site-nav__menu-item" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
     <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
       <div class="site-nav__mobile-bar-1" v-bind:class="{'site-nav__mobile-bar-1--change': isChange}"></div>
@@ -74,24 +74,39 @@ h1, h2 {
     margin: 0;
     font-weight: bold;
     display: inline-block;
-    width: 20%;
+    @include desktop {
+      width: 20%;
+    }
+    @include mobile {
+      width: 40%;
+      margin-top: .25em;
+    }
     float: left;
   }
 
-  &__desktop {
+  &__menu {
     display: inline-block;
-    border-bottom: 1px solid #24A061;
+    border-bottom: 1px solid $active-color;
     width: 80%;
     float: left;
     @include mobile {
-      display: none;
+      display: block;
+      width: 92%;
+      margin: 1em 0;
+      z-index: 1;
+      position: absolute;
+      border: 1px solid $active-color;
+      background-color: #FFF;
     }
   }
 
-  &__mobile-menu {
-    display: none;
+  &__menu-item {
+    @include mobile {
+      display: block;
+      clear: both;
+      text-align: center;
+    }
   }
-
   &__mobile-bar-container {
     cursor: pointer;
     float: right;
@@ -133,7 +148,7 @@ h1, h2 {
 }
 
 .router-link-active {
-  border-bottom: 2px solid #24A061;
+  border-bottom: 2px solid $active-color;
 }
 
 ul {
@@ -155,12 +170,12 @@ li {
 
     &:hover {
       /*background-color: #111;*/
-      border-bottom: 2px solid #24A061;
+      border-bottom: 2px solid $active-color;
     }
 
     &:active {
       /*background-color: #111;*/
-      border-bottom: 2px solid #24A061;
+      border-bottom: 2px solid $active-color;
     }
   }
 }
