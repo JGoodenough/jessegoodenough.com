@@ -1,7 +1,7 @@
 <template>
   <nav class="site-nav">
+    <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
     <ul class="site-nav__desktop">
-      <li><router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link></li>
       <li v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </ul>
     <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
@@ -74,12 +74,15 @@ h1, h2 {
     margin: 0;
     font-weight: bold;
     display: inline-block;
+    width: 20%;
+    float: left;
   }
 
   &__desktop {
     display: inline-block;
     border-bottom: 1px solid #24A061;
-    width: 100%;
+    width: 80%;
+    float: left;
     @include mobile {
       display: none;
     }
@@ -91,6 +94,8 @@ h1, h2 {
 
   &__mobile-bar-container {
     cursor: pointer;
+    float: right;
+    margin: 0 .25em;
     @include desktop {
       display: none;
     }
