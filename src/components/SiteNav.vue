@@ -91,6 +91,11 @@ h1, h2 {
     float: left;
     @include mobile {
       display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease-in;
+      -ms-transition: opacity 0.4s ease-in;
+      -moz-transition: opacity 0.4s ease-in;
+      -webkit-transition: opacity 0.4s ease-in;
     }
   }
 
@@ -103,6 +108,13 @@ h1, h2 {
       position: absolute;
       border: 1px solid $active-color;
       background-color: #FFF;
+      padding: .5em 0;
+      
+      opacity: 1;
+      transition: opacity 0.4s ease-out;
+      -ms-transition: opacity 0.4s ease-out;
+      -moz-transition: opacity 0.4s ease-out;
+      -webkit-transition: opacity 0.4s ease-out;
     }
   }
 
