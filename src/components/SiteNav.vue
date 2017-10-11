@@ -108,15 +108,15 @@ h1, h2 {
     width: 30px;
     height: 5px;
     background-color: #333;
-    margin: 6px 0;
+    margin: 5px 0;
     transition: 0.4s;
     @include border-radius(10px);
   }
 
   /* Rotate first bar */
   &__mobile-bar-1--change  {
-      -webkit-transform: rotate(-45deg) translate(-7px, 8px) ;
-      transform: rotate(-45deg) translate(-7px, 8px) ;
+      -webkit-transform: rotate(-45deg) translate(-5px, 8px) ;
+      transform: rotate(-45deg) translate(-5px, 8px) ;
   }
 
   /* Fade out the second bar */
@@ -126,8 +126,8 @@ h1, h2 {
 
   /* Rotate last bar */
   &__mobile-bar-3--change {
-      -webkit-transform: rotate(45deg) translate(-7px, -9px) ;
-      transform: rotate(45deg) translate(-7px, -9px) ;
+      -webkit-transform: rotate(45deg) translate(-6px, -9px) ;
+      transform: rotate(45deg) translate(-6px, -9px) ;
   }
 
 }
