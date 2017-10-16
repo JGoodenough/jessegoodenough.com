@@ -5,3 +5,6 @@ deploy:
   app: jessegoodenough
   api_key:
     secure: obndnNxXpWifmhx9KB2UbC+urhWU3wASk1MbT+nUA3ftMBwdZslCIBSRJ0iuanLag1pFPq/8rSgLeDGvmrtsGDVIM9//2AtA+K58hvxfD3nPV/4JOhY+3K/kSx5Vh8kpc14hOyqiXDI0oy0aQwkInK405uYXIM712BI0VhfVYXd2krVN0gy2fqvTwB8pewHyNYNbsYBa5g774Tt28AmregQvme0JzpgTosYDxuIj3QUntw/KLSE4CkaGRGXYwsF2F9QBtvbojjZICM4/Y21LQD9Na+7DJIy7I3S1Yoqrl5t5U22l0ERneRY9A2xDsKW2vQzzY1vJlVAIgwQ+vZq4zDULBQ8YsvsdmvQ9p1cFny3c/QlbepMCDsHz0ryq0HkKvBI5ecvvn8ulXXnZrDn4qWJwO9eFMXQeyxqUmtllTBxr4LncG2TkkD4meIGK176np2YaZrJepinWBcsMbHBhjDD6ppDFoVaJBa6SCkqZlLdwkGkPdHMj8B+tXQnctz90/J7kCIMXuYiUb8djj5SHfQ2tt6qN8XwUptHFnlSQFs1PsNoTna2dwOtmUE7gDGz4ZUc3fSXU/d9Z/+Pdj1nO1cu8XPhlHO0u0m+FTGX8147gx4njEt/chZ/6T7CYmggrdu3XMbO+lzn8/U/ZhyynF7Lg/JglxsNmJw0bf6bJ5M0=
+  run:
+    - npm run build
+    - npm run start
