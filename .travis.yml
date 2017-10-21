@@ -1,5 +1,7 @@
 language: node_js
 sudo: enabled
+before_install:
+  - chmod 0600 ~/.gnupg/gpg.conf
 deploy:
   provider: heroku
   app: jessegoodenough
