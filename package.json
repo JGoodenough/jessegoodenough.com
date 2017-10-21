@@ -4,6 +4,7 @@
   "description": "A Vue.js project",
   "author": "Jesse Goodenough <jesse.goodenough@gmail.com>",
   "private": true,
+  "main": "server/server.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node server/server.js",
