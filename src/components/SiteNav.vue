@@ -63,7 +63,7 @@ h1, h2 {
 .site-nav {
   display: block;
   width: 98%;
-  margin: 0em 0.5em;
+  margin: 0.5em 0.5em;
   height: 25px;
   @include desktop {
     border-bottom: 1px solid $active-color;
@@ -137,7 +137,7 @@ h1, h2 {
   &__mobile-bar-container {
     cursor: pointer;
     float: right;
-    margin: 0 .25em;
+    margin: 0 1.25em;
     @include desktop {
       display: none;
     }
