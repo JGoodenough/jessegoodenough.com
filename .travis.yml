@@ -1,12 +1,12 @@
 language: node_js
 sudo: enabled
 before_install:
-  - chmod 0600 ~/.gnupg/gpg.conf
+- chmod 0600 ~/.gnupg/gpg.conf
 deploy:
   provider: heroku
   app: jessegoodenough
   api_key:
-    secure: obndnNxXpWifmhx9KB2UbC+urhWU3wASk1MbT+nUA3ftMBwdZslCIBSRJ0iuanLag1pFPq/8rSgLeDGvmrtsGDVIM9//2AtA+K58hvxfD3nPV/4JOhY+3K/kSx5Vh8kpc14hOyqiXDI0oy0aQwkInK405uYXIM712BI0VhfVYXd2krVN0gy2fqvTwB8pewHyNYNbsYBa5g774Tt28AmregQvme0JzpgTosYDxuIj3QUntw/KLSE4CkaGRGXYwsF2F9QBtvbojjZICM4/Y21LQD9Na+7DJIy7I3S1Yoqrl5t5U22l0ERneRY9A2xDsKW2vQzzY1vJlVAIgwQ+vZq4zDULBQ8YsvsdmvQ9p1cFny3c/QlbepMCDsHz0ryq0HkKvBI5ecvvn8ulXXnZrDn4qWJwO9eFMXQeyxqUmtllTBxr4LncG2TkkD4meIGK176np2YaZrJepinWBcsMbHBhjDD6ppDFoVaJBa6SCkqZlLdwkGkPdHMj8B+tXQnctz90/J7kCIMXuYiUb8djj5SHfQ2tt6qN8XwUptHFnlSQFs1PsNoTna2dwOtmUE7gDGz4ZUc3fSXU/d9Z/+Pdj1nO1cu8XPhlHO0u0m+FTGX8147gx4njEt/chZ/6T7CYmggrdu3XMbO+lzn8/U/ZhyynF7Lg/JglxsNmJw0bf6bJ5M0=
+    secure: IVPFDRFkHgRrStD2fq1xOJaNoQCltTQyeXDtKd3YIZzWLgbWk6gPaAgWZcdAfal5aSJIl23+xtAxeYig/7deY1r7eLkO4qtCvufhfR4i29MUnshjvtgpM4LBI+RDMvYgbN7GEzfzmNpUjtXRnaNuhhiCvg5r5eUPEcM1dAWi6tbcLk4jNzJdkg2djLCh1lzDc4PQ55zoJ9q151FaD8FiJ5ErG5JNSuLd5mmXGnn29cL0/TE9Yd3DfEOpIhT4tyrF5iWXvkb0WzT8Dcne3YhdbFWSA30VFkxbTj+Py9apCxy3YZHiIPc/Cxf8PZ1QVMbzhDW1Qeq+0NpvukW10iyZAqMdypFNiLlQv5e5OKsV7qSxW5ESYZ0e0zxRuMNV1QiqsU+CZggPAnt2bnAQnsrhA70XPmidVCwj0dbyKBVt15gBQ+4h+B2S+do8DjUK6GhdsoH3b7+jjIf1OI/CdRPjyVGL2nWXrcpjXsQ3IKBtUBhaaqDSLE67wAD7ZeVDR7xyM1UkHOCNHNAEW7ThFr5EsXjX5eLJ1DYtrVw3bxe3731ZjJFetrtehG/coYj0jBRV5dNZAXMq4OZReapEbrN3cK+KXlLY/DZAyaD6SxyaM0XE7QilyC+2tm8b+oIjX9Un2dNBi5e2mPn5zkFRlyKvt2zyVEahIfgAnEt/0vTFRMM=
   run:
-    - npm run build
-    - npm run start
+  - npm run build
+  - npm run start
