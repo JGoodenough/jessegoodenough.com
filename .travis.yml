@@ -1,4 +1,7 @@
 language: node_js
+language: node_js
+node_js:
+  - "8"
 sudo: enabled
 before_install:
 - chmod 0600 ~/.gnupg/gpg.conf
