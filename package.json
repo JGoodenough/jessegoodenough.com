@@ -10,7 +10,7 @@
     "start": "node server/server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "test": "npm run unit && npm run build && git add . && git commit -am 'Build app for deploy after CI && git push origin master'",
+    "test": "npm run unit && npm run build",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
