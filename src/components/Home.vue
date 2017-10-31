@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       msg: 'A personal site.',
-      siteDescription: `I'm a programmer, digital vagabond, problem solver, adventurer, ultra-runner, climber, route setter and surfer.`
+      siteDescription: `I'm a ultra-runner, climber, surfer, route setter, programmer, digital vagabond, problem solver and adventurer.`
     }
   }
 }

@@ -27,10 +27,6 @@ export default {
       isChange: false,
       navLinks: [
         {
-          path: 'code',
-          name: 'code'
-        },
-        {
           path: 'ultra-running',
           name: 'ultra-running'
         },
@@ -45,6 +41,10 @@ export default {
         {
           path: 'tea',
           name: 'tea'
+        },
+        {
+          path: 'code',
+          name: 'code'
         }
       ]
     }
