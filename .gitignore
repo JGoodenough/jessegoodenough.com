@@ -1,5 +1,6 @@
 #build
-dist/
+#ignore this and add to git because it may screw up travis ci builds
+#dist/
 
 # Editor directories and files
 .idea
