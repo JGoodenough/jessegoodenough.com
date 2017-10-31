@@ -4,6 +4,7 @@ node_js:
 sudo: enabled
 before_install:
 - chmod 0600 ~/.gnupg/gpg.conf
+- chmod u+x .travis/deploy.sh
 deploy:
   provider: heroku
   app: jessegoodenough
