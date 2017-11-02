@@ -1,9 +1,9 @@
 <template>
   <nav class="site-nav">
     <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
-    <ul class="site-nav__menu" v-bind:class="{'site-nav__menu--active': isChange}">
-      <li class="site-nav__menu-item" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
-    </ul>
+    <transition-group tag="ul" name="list" class="site-nav__menu" v-bind:class="{'site-nav__menu--active': isChange}" appear>
+      <li class="site-nav__menu-item" :key="navLink" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
+    </transition-group>
     <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
       <div class="site-nav__mobile-bar-1" v-bind:class="{'site-nav__mobile-bar-1--change': isChange}"></div>
       <div class="site-nav__mobile-bar-2" v-bind:class="{'site-nav__mobile-bar-2--change': isChange}"></div>
@@ -131,6 +131,15 @@ h1, h2 {
       width: 100%;
     }
   }
+
+  .list-enter-active, .list-leave-active {
+    transition: all 1s;
+  }
+  .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
   &__mobile-bar-container {
     cursor: pointer;
     float: right;
