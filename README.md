@@ -1,7 +1,7 @@
 
 # jessegoodenough.com
 
-> A Vue.js project
+> A personal site built using the Vue.js framework.
 
 ## Build Setup
 
