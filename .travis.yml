@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-- 'node'
+- node
 sudo: enabled
 notifications:
   email:
   - jesse.goodenough@gmail.com
 before_install:
 - chmod 0600 ~/.gnupg/gpg.conf
-#for e2e chrome tests to work
 - export CHROME_BIN=/usr/bin/google-chrome
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
@@ -19,7 +18,5 @@ deploy:
   provider: heroku
   app: jessegoodenough
   api_key:
-    secure: x3E+6fCH/ilh/05V9fQYmT2Ci1eKYlfHQb9K+pmbVLT2LjqGUH2ciKQ5qXgMq5J4cDWgSmVVBcojT50GtwocLxWYggaOfgEeI8yTR/tlSlJ3lYKzN8spkIlrPLsJdueqFkG1K6CB16Mcl1Er2JdAH7FrX59A+mrxuXh59+3pznwXik9aeFIfFWKjbwmaA7fD3SeCbBK+bF3DKpoByNgQVEyx0A3mBsSMyj9znJDiRab6f4+umRqdOmDnVsZkZIo6rfRIHH39CNM3OL2ElzN5Y4ObfsJGoGdd5K7aE0HIA0BqWG36bUTRMsqpmJlZcX7Xtjwyl6A5862qH5nLm2RfDMILdbm2bdy7vW5RSmw7r4CDjLqgkDIJLVhypkDl2zLVoNnj7mdCnne8cYHAauRHvk680ciK2uFzLRyYD2xpKhkqsJyCxJmkTyjtlzFukE3aTCt7FJwBcOZMt/NYy0h0Hr+Fhlck/UOpZYJtxcG092u0LbP2PwXcd5dHOZhhKe7E3uc4te7zA1IgR1WBsdZWasyM5wF66Cn1MrfUAHzX8Sfa9RtGGUsf7PRZyPWthyAAbUv8XNHoepBGqbkdjYze83vqGFHCAO5lcjNCpC0VJf2inaU9ZjCqC1YHLZWaO6NFigdav/Ul2dOWmNYuPOA4XUTEPNHU6u1uTyVQsCevq+Q=
+    secure: EJH2tWbKzT869cWaEt7v3CkcU+GiaUg0SGgxCVmw5EXfWyJ2hH/RYHln3dX+myWyu1k4I8aTB4kJ8O4tUlsQjlZ6ioC6QsHFPTK99bo59i7DKRBWoFerzHgTDHRWx1wWaKoLjBhwV+NSJ3sD7+CHAQ8qlA8jlbPkNxQXL72zhru/mZMVAnWjhVTwJGNdXlSuMY4vlWdR4OQnThNOi1+NEeWr57a01YBR/wte1x5gkyX3XV0iKRPwvFWk9pZC4B5oAiinXmzyIehE1VOiUOvMM7Pf7iM81W18z7bFccEtyx2zl9eksHxV1sPZIWcf8YPXU9mQQ0dedfkTAwMzxtVREnppbD39mrUP4WLydjISU0wZReaM4o+vEJ29YPc0RyC7zac8F+gd8MeiqrZC1jK8GHMFkhEGGkHNsK3VNKhN9NLNSGrzwg+jODi6DvkxmVCGyWjcsnRIFRbtQUJhyTSveM/pas7sB+En6vdZTr5XMRxrLVNQ4Vz2qsKHzydoJMnOmDChGDeGijNhWcjT9hUoQP0uXqJy0PvUDSgM85WKRmClzETfsblJrguo+PyNi6cp5B1bTiyBb+1XzxLW5ITMpS7ZEFKB28vgBUAI7+UvWVuwYgv9I8TPYdDVWQr8tIYBFDnqDuUy/L7L/jj6V7hHqQYQ54Lj8nUjP2FRekoNi2k=
   skip_cleanup: true
-  # run:
-  # - npm run start
