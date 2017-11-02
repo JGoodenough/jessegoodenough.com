@@ -1,17 +1,19 @@
 <template>
-  <div class="code">
+  <div class="ultra-running">
     <h1>{{ headTitle }}</h1>
-    <code class="code__body">{{ description }}</code>
+    <code class="ultra-running__body">{{ description }}</code>
+    <p v-for="testLink in testLinks">{{testLink}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'code',
+  name: 'ultrarunning',
+  props: ['testLinks'],
   data () {
     return {
-      headTitle: 'Code page header',
-      description: `Code Page Section!`
+      headTitle: 'Ultra-Running page header',
+      description: `Ultra-Running Page Section!`
     }
   }
 }

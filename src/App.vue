@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <SiteNav></SiteNav>
-    <router-view></router-view>
+    <transition name="slide">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 

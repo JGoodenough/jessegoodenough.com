@@ -16,9 +16,6 @@
 export default {
   name: 'sitenav',
   methods: {
-    toggleMobileMenu: function () {
-      this.isChange = !this.isChange
-    }
   },
   data () {
     return {
@@ -116,7 +113,7 @@ h1, h2 {
       border: 1px solid $active-color;
       background-color: #FFF;
       padding: .5em 0;
-      
+
       // TODO: add animation
       // opacity: 1;
       // transition: opacity 0.4s ease-out;
