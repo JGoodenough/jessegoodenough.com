@@ -1,6 +1,8 @@
 <template>
   <nav class="site-nav">
-    <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
+    <transition name="site-nav__slide-fade" appear>
+      <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
+    </transition>
     <transition-group tag="ul" name="list" class="site-nav__menu" v-bind:class="{'site-nav__menu--active': isChange}" appear>
       <li class="site-nav__menu-item" :key="navLink" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </transition-group>
@@ -67,6 +69,20 @@ h1, h2 {
   }
   @include mobile {
     border-bottom: none;
+  }
+
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  &__slide-fade-enter-active {
+    transition: all .8s ease;
+  }
+  &__slide-fade-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  &__slide-fade-enter, &__slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
   &__site-logo {
