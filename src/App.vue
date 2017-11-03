@@ -21,13 +21,13 @@ export default {
 <style lang="scss">
 @import './assets/styles/global.scss';
 
-* {
-    box-sizing: border-box;
-}
+// * {
+//     box-sizing: border-box;
+// }
 
-body {
-  margin: 0;
-}
+// body {
+//   margin: 0;
+// }
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
