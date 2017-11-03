@@ -4,7 +4,7 @@
       <router-link class="site-nav__site-logo" :to="siteURL">{{ siteName }}</router-link>
     </transition>
     <transition-group tag="ul" name="list" class="site-nav__menu" v-bind:class="{'site-nav__menu--active': isChange}" appear>
-      <li class="site-nav__menu-item" :key="navLink" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
+      <li class="site-nav__menu-item" :key="navLink.name" @click="isChange = !isChange" v-for="navLink in navLinks"><router-link :to="navLink.path">{{navLink.name}}</router-link></li>
     </transition-group>
     <div class="site-nav__mobile-bar-container" @click="isChange = !isChange">
       <div class="site-nav__mobile-bar-1" v-bind:class="{'site-nav__mobile-bar-1--change': isChange}"></div>
