@@ -19,11 +19,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/styles/global.scss';
+// @import './assets/styles/_reset.scss';
+// @import "~normalize.css/normalize.css";
+@import './assets/styles/_global.scss';
 
-// * {
-//     box-sizing: border-box;
-// }
+* {
+    box-sizing: border-box;
+}
 
 // body {
 //   margin: 0;
