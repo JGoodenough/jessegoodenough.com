@@ -1,6 +1,10 @@
 {
   "name": "jg-vue-webpack",
   "version": "1.0.0",
+  "engines": {
+    "node": "9.0.x",
+    "npm": "5.5.x"
+  },
   "description": "A Vue.js project",
   "author": "Jesse Goodenough <jesse.goodenough@gmail.com>",
   "private": true,
