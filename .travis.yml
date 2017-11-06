@@ -18,6 +18,9 @@ before_install:
 install:
 - sudo sed -i '/apache/d' /etc/apt/sources.list
 - sudo apt-get update
+cache:
+  directories:
+    - "node_modules"
 deploy:
   provider: heroku
   app: jessegoodenough
