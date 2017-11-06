@@ -15,9 +15,9 @@ before_install:
 - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 - sudo dpkg -i google-chrome*.deb
 #- npm install cross-env
-install:
-- sudo sed -i '/apache/d' /etc/apt/sources.list
-- sudo apt-get update
+# install:
+# - sudo sed -i '/apache/d' /etc/apt/sources.list
+# - sudo apt-get update
 cache:
   directories:
     - "node_modules"
