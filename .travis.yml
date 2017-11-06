@@ -6,6 +6,7 @@ notifications:
   email:
   - jesse.goodenough@gmail.com
 before_install:
+- npm i -g npm@5.3.x
 - chmod 0600 ~/.gnupg/gpg.conf
 - export CHROME_BIN=/usr/bin/google-chrome
 - export DISPLAY=:99.0
@@ -14,7 +15,6 @@ before_install:
 - sudo apt-get install -y libappindicator1 fonts-liberation
 - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 - sudo dpkg -i google-chrome*.deb
-- sudo npm install -g npm@5.3.x
 install:
 - sudo sed -i '/apache/d' /etc/apt/sources.list
 - sudo apt-get update
