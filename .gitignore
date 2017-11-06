@@ -22,7 +22,7 @@ Desktop.ini
 
 # npm
 node_modules
-package-lock.json
+#package-lock.json
 bower_components
 *.log
 *.gz
