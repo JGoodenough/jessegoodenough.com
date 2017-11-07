@@ -19,6 +19,7 @@ install:
 - sudo sed -i '/apache/d' /etc/apt/sources.list
 - sudo apt-get update
 - npm install
+- npm run build
 cache:
   directories:
     - "node_modules"
