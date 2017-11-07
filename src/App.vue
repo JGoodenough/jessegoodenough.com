@@ -40,6 +40,9 @@ export default {
   color: $site-color;
   margin-top: 0;
   background-color: $site-background-color;
+  background: url('./assets/images/jesse-tesla-finish.jpeg');
+  height: 100%;
+  min-height: 50em;
 }
 
 /* Enter and leave animations can use different */

@@ -64,6 +64,7 @@ h1, h2 {
   width: 98%;
   margin: 0.5em 0.5em;
   height: 25px;
+  background-color: $site-background-color;
   @include desktop {
     border-bottom: 1px solid $active-color;
   }
