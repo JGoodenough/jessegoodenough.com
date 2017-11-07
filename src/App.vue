@@ -40,7 +40,7 @@ export default {
   color: $site-color;
   margin-top: 0;
   background-color: $site-background-color;
-  background: url('./assets/images/jesse-tesla-finish.jpeg');
+  background: url('./assets/images/jesse-tesla-finish.jpeg') no-repeat;
   height: 100%;
   min-height: 50em;
 }
