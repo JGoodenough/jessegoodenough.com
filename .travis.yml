@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-- "9"
+- "8"
 sudo: enabled
 notifications:
   email:
   - jesse.goodenough@gmail.com
 before_install:
-#- npm i -g npm@5.3.x
+- npm i -g npm@5.3.x
 - chmod 0600 ~/.gnupg/gpg.conf
 - export CHROME_BIN=/usr/bin/google-chrome
 - export DISPLAY=:99.0
