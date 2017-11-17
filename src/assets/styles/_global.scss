@@ -9,6 +9,15 @@ $mobile-bars: 3;
 $mobile-width: 768px;
 $desktop-width: 1024px;
 
+// Mixin itself
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
 @mixin mobile {
   @media (max-width: $mobile-width) {
     @content;

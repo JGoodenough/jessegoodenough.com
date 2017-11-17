@@ -2,8 +2,8 @@
   "name": "jg-vue-webpack",
   "version": "1.0.0",
   "engines": {
-    "node": "8.x",
-    "npm": "5.3.x"
+    "node": "8.9.x",
+    "npm": "5.5.x"
   },
   "description": "A Vue.js project",
   "author": "Jesse Goodenough <jesse.goodenough@gmail.com>",
