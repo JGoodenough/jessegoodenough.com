@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-// @import './assets/styles/reset.scss';
+@import './assets/styles/reset.scss';
 // @import "~normalize.css/normalize.css";
 @import './assets/styles/global';
 @import './assets/styles/responsive';

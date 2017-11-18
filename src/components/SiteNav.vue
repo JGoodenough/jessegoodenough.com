@@ -61,9 +61,10 @@ h1, h2 {
 
 .site-nav {
   display: block;
-  width: 98%;
-  margin: 0.5em 0.5em;
-  height: 25px;
+  width: 100%;
+  margin: 0.5em 0em;
+  // height: 25px;
+  @include clearfix;
   background-color: $site-background-color;
   @include desktop {
     border-bottom: 1px solid $active-color;
