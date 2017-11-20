@@ -66,13 +66,13 @@ a {
   position: relative;
 }
 .home__title {
-  position: absolute;
-  z-index: 1;
   margin: 4em auto;
+  text-align: center;
+  clear: both;
 }
 .home__sub-title {
-  position: absolute;
-  z-index: 1;
   margin: 4em auto;
+  text-align: center;
+  clear: both;
 }
 </style>
