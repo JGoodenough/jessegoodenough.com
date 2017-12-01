@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- "8"
+- '8'
 sudo: enabled
 notifications:
   email:
@@ -17,15 +17,14 @@ before_install:
 - sudo dpkg -i google-chrome*.deb
 install:
 - sudo sed -i '/apache/d' /etc/apt/sources.list
-- sudo apt-get update
 - npm install
 - npm run build
 cache:
   directories:
-    - "node_modules"
+  - node_modules
 deploy:
   provider: heroku
   app: jessegoodenough
   api_key:
-    secure: EJH2tWbKzT869cWaEt7v3CkcU+GiaUg0SGgxCVmw5EXfWyJ2hH/RYHln3dX+myWyu1k4I8aTB4kJ8O4tUlsQjlZ6ioC6QsHFPTK99bo59i7DKRBWoFerzHgTDHRWx1wWaKoLjBhwV+NSJ3sD7+CHAQ8qlA8jlbPkNxQXL72zhru/mZMVAnWjhVTwJGNdXlSuMY4vlWdR4OQnThNOi1+NEeWr57a01YBR/wte1x5gkyX3XV0iKRPwvFWk9pZC4B5oAiinXmzyIehE1VOiUOvMM7Pf7iM81W18z7bFccEtyx2zl9eksHxV1sPZIWcf8YPXU9mQQ0dedfkTAwMzxtVREnppbD39mrUP4WLydjISU0wZReaM4o+vEJ29YPc0RyC7zac8F+gd8MeiqrZC1jK8GHMFkhEGGkHNsK3VNKhN9NLNSGrzwg+jODi6DvkxmVCGyWjcsnRIFRbtQUJhyTSveM/pas7sB+En6vdZTr5XMRxrLVNQ4Vz2qsKHzydoJMnOmDChGDeGijNhWcjT9hUoQP0uXqJy0PvUDSgM85WKRmClzETfsblJrguo+PyNi6cp5B1bTiyBb+1XzxLW5ITMpS7ZEFKB28vgBUAI7+UvWVuwYgv9I8TPYdDVWQr8tIYBFDnqDuUy/L7L/jj6V7hHqQYQ54Lj8nUjP2FRekoNi2k=
+    secure: hxRN+rJgcLB4ZQu389DzjhkBzade+RlEYfugA7KCc5/towvuRP1ysCvWgka3MkwNGVDRVpNaABG1USW2Y//QnE3p/gKhoXuI2ce+FuPik/hQfxsXJbKkvBjkpJKLapKpNJARG8C1X6cH+yCD6M82A/JWjO882nHmB8US4ju/MjXAOOymMH4diNX9V+pP7tb1lMz6kNJfkmhydA8Y8W5EanGX6aJHSuDBYwFPSPekY376O1kHs82gunZPubPD6HjcxmnExzVXPdHV5GxXWE6zbdH2uLchPn00jV6ATqXNw77h20Tkijfp6p0t3nWTYlNUoPEnMYXgsOmvB4GMpBi14AtR1dUI5KBgN8P3ITrn5aj8B0YQyyh3cSx76BQ6fH6qN5sY3aAVO5jjIb8KnIWje+w4xYTYOAFhE6zJdbBhm5uk6t0oMlyeRNhT4FuFW2uaekp5xoSuWKaa8+Ix2YmBZMf25Jo748eQ26YsTA7yn6oGmZ61GhN+CT5DKbnrxUqtsTa9ZKsh/dTCNdg/ntkwtGFsD5Ft0k6vkqf0ImDqOpUMHWE0niZdfwNw+U9HgUjXMiv3JPour5kcNwsYjv9vTw9JTNItbUBj6faxOKqq93mzebb0Y2cj0/T7mwyEhfKUtYTNJ1tAau7cSXl77oDVxm93bE1pM93ZhO/DZWmQ7QU=
   skip_cleanup: true
