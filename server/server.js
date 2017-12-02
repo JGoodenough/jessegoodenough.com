@@ -2,6 +2,8 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var history = require('connect-history-api-fallback');
+var helmet  require('helmet');
+app.use(helmet());
 
 app.use(history());
 
